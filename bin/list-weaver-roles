@@ -1,0 +1,39 @@
+#!perl
+
+# DATE
+# VERSION
+
+use 5.010;
+use strict;
+use warnings;
+
+use App::WeaverUtils;
+use Perinci::CmdLine::Any -prefer_lite=>1;
+
+our %SPEC;
+$SPEC{list_weaver_roles} = {
+    v => 1.1,
+    summary => 'List installed Pod::Weaver roles',
+    args => {
+    },
+};
+sub list_weaver_roles {
+    require Module::List;
+    my %args = @_;
+    my $res = Module::List::list_modules("Pod::Weaver::Role::",
+                                         {list_modules=>1, recurse=>1});
+    [200, "OK", [map {s/^Pod::Weaver::Role:://;$_} sort keys %$res]];
+}
+
+Perinci::CmdLine::Any->new(
+    url => '/main/list_weaver_roles',
+)->run;
+
+# ABSTRACT: List installed Pod::Weaver roles
+# PODNAME:
+
+=head1 SYNOPSIS
+
+ % list-weaver-roles
+
+=cut

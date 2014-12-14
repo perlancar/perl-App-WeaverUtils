@@ -1,0 +1,39 @@
+#!perl
+
+# DATE
+# VERSION
+
+use 5.010;
+use strict;
+use warnings;
+
+use App::WeaverUtils;
+use Perinci::CmdLine::Any -prefer_lite=>1;
+
+our %SPEC;
+$SPEC{list_weaver_plugins} = {
+    v => 1.1,
+    summary => 'List installed Pod::Weaver plugins',
+    args => {
+    },
+};
+sub list_weaver_plugins {
+    require Module::List;
+    my %args = @_;
+    my $res = Module::List::list_modules("Pod::Weaver::Plugin::",
+                                         {list_modules=>1, recurse=>1});
+    [200, "OK", [map {s/^Pod::Weaver::Plugin:://;$_} sort keys %$res]];
+}
+
+Perinci::CmdLine::Any->new(
+    url => '/main/list_weaver_plugins',
+)->run;
+
+# ABSTRACT: List installed Pod::Weaver plugins
+# PODNAME:
+
+=head1 SYNOPSIS
+
+ % list-weaver-plugins
+
+=cut
