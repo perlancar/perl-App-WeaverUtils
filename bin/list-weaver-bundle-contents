@@ -55,7 +55,7 @@ Perinci::CmdLine::Any->new(
     url => '/main/list_weaver_bundle_contents',
 )->run;
 
-# ABSTRACT: List contents of a Pod::Weaver plugin bundle
+# ABSTRACT: 
 # PODNAME:
 
 =head1 SYNOPSIS

@@ -29,7 +29,7 @@ Perinci::CmdLine::Any->new(
     url => '/main/list_weaver_plugins',
 )->run;
 
-# ABSTRACT: List installed Pod::Weaver plugins
+# ABSTRACT: 
 # PODNAME:
 
 =head1 SYNOPSIS
