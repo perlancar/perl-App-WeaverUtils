@@ -1,11 +1,11 @@
-0.05    2016-01-18 (PERLANCAR)
+0.05    2016-01-18  Released-By: PERLANCAR
 
         - No functional changes.
 
         - [build] Rebuild to fix POD section ordering.
 
 
-0.04    2015-09-03 (PERLANCAR)
+0.04    2015-09-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -14,7 +14,7 @@
 	  requirement.
 
 
-0.03    2015-03-21 (PERLANCAR)
+0.03    2015-03-21  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -22,13 +22,13 @@
 	  & more complete See Also.
 
 
-0.02    2014-12-28 (PERLANCAR)
+0.02    2014-12-28  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Extract completion routine to separate dist Complete-Pod-Weaver.
 
 
-0.01    2014-12-14 (PERLANCAR)
+0.01    2014-12-14  Released-By: PERLANCAR
 
         - First release.
